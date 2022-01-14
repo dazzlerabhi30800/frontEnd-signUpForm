@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    font-family : 'Poppins', sans-serif;
+    transition : all .3s ease-in-out;
+}
+
+:root {
+    --Red: hsl(0, 100%, 74%) ;
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%) ;
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+body {
+    display : flex;
+    justify-content : center;
+    /* align-items : center; */
+    height : 100vh;
+    background : url('images/bg-intro-mobile.png') rgb(243, 93, 93);
+    object-fit : cover;
+}
+
+.container {
+    display : flex;
+    justify-content : center;
+    /* align-items : center; */
+}
+
+.component {
+    width : 100%;
+    height : 50vh;
+    /* background : white; */
+    display : flex;
+    /* justify-content : center; */
+    align-items : center;
+    flex-direction : column;
+    margin-top : 4rem;
+}
+
+.text-wrapper {
+    display : grid;
+    width : 50%;
+    height : 60%;
+    /* background : #ccc; */
+    margin-left : 4rem;
+    padding-left : 5px;
+    justify-content : center;
+    text-align : center;
+    align-items : center;
+    margin-top : 2rem;
+
+}
+.heading {
+    font-size : 1.7rem;
+    color : white;
+}
+.sub-heading {
+    font-size : 13px;
+    color : var(--Grayish-Blue);
+    line-height : 15px;
+    margin-top : 10px;
+    position : relative;
+    width : 100%;
+}
+
+.side-component {
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    text-align : center;
+    flex-direction : column;
+    margin-top : 3rem;
+    margin-left : 1.5rem;
+    /* background : #ccc; */
+    width : 60%;
+    min-width  : 60%;
+    height : auto;
+}
+.top-headline {
+    width : 80%;
+    background : var(--Blue);
+    color : rgb(204, 200, 200);
+    border-radius : 10px;
+    outline : none;
+    border :  none;
+    margin-top : 10px;
+    position : relative;
+    margin-top : 1rem;
+}
+.headline-text {
+    font-size : .7rem;
+    padding-top : 20px;
+    padding-bottom : 20px;
+    padding-right : 2rem;
+    padding-left : 2rem;
+    font-weight : lighter;
+}
+h1 .trial {
+    color : rgb(253, 253, 253);
+    font-weight : 700;
+}
+
+.form {
+    display : flex;
+    width : 20rem;
+    height : auto;
+    background : white;
+    margin-top : 2rem;
+    margin-bottom : 1rem;
+    border-radius : 10px;
+    flex-direction: column;
+}
+
+.form-control {
+    display : flex;
+    flex-direction : column;
+    margin-top : .2rem;
+    margin-left : 1rem;
+    position : relative;
+    width : 90%;
+}
+.form-control input {
+    margin-top : 1rem;
+    border : none;
+    outline : none;
+    border-bottom : 1px solid #ccc;
+    padding-bottom : 10px;
+    padding-top : 10px;
+    padding-left : 5px;
+}
+
+.form-control input.active{
+    border : 1px solid red;
+    border-radius : 8px;
+}
+
+input::placeholder {
+    color : rgb(150, 146, 146);
+    font-weight : bolder;
+}
+
+.errorImg {
+    position : relative;
+    width : 5%;
+    height : 4%;
+    top : -1.8rem;
+    left : 90%;
+    display : none;
+
+}
+.errorImg.active {
+    display : block;
+}
+
+.errorText {
+    font-size : 9px;
+    position : relative;
+    left : 25%;
+    top : -10px;
+    color : red;
+    display : none;
+}
+
+.errorText.active {
+    display : block;
+}
+
+
+
+
+.btn {
+    font-size : .9rem;
+    background : var(--Green);
+    outline : none;
+    border : none;
+    border-radius : 10px;
+    padding-top : .7rem;
+    padding-bottom : .7rem;
+    color : white;
+    font-weight : bolder;
+    margin-top : 15px;
+    cursor : pointer;
+}
+.btn:hover {
+    background : rgb(58, 211, 58);
+}
+
+.footer-text {
+    font-size : 11px;
+    margin-top : 1rem;
+    position : relative;
+    width : 70%;
+    margin-left : 2.5rem;
+    color : rgb(172, 168, 168);
+    margin-bottom : 10px;
+}
+
+.footer-text span {
+    color : var(--Red);
+}
+
+@media (min-width : 1000px) {
+    .container {
+        margin-top : 5rem;
+    }
+    .component {
+        display : flex;
+        flex-direction : row;
+        justify-content : center;
+        align-items : center;
+    }
+
+    .top-headline {
+        width : 40%;
+    }
+
+    .heading {
+        font-size : 2rem;
+    }
+
+    .sub-heading {
+        font-size : .9rem;
+        margin-top : 0;
+        line-height : 18px;
+    }
+}
